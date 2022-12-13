@@ -1,0 +1,43 @@
+.wrapper {
+    position: relative;
+    width: 80%;
+    padding: 20px;
+    background: #e7d9bf;
+    border: solid 7px #b4a280;
+    font-size: 20px;
+    padding-top: 65px;
+    .top{
+        font-size: 30px;
+        font-weight: 600;
+        position: absolute;
+        display: flex;
+        width: 100%;
+        top: 20px;
+        right: 0;
+        justify-content: center;
+    }
+    .categ {
+        text-align: start;
+        font-weight: bold;
+        margin-bottom: 10px;
+        .merch{
+            display: flex;
+            justify-content: space-between;
+            font-weight: normal;
+            margin-bottom: 10px;
+            &>*{
+                flex-basis: 33%;
+                text-align: center;
+            }
+        }
+    }
+    .titles{
+        display: flex;
+        justify-content: space-around;
+        font-weight: bold;
+        margin-bottom: 10px;
+        .price {
+            margin-left: 35px;
+        }
+    }
+}

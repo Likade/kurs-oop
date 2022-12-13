@@ -1,0 +1,22 @@
+.error {
+    color: red;
+    display: flex;
+    flex-direction: column;
+    border: dashed 5px #ff000069;
+    background: #fff7e8;
+    width: max-content;
+    position: fixed;
+    padding: 10px;
+    bottom: 33px;
+}
+.success {
+    color: green;
+    display: flex;
+    flex-direction: column;
+    border: dashed 5px #33ff0069;
+    background: #f0ffe8;
+    width: max-content;
+    position: fixed;
+    padding: 10px;
+    bottom: 33px;
+}
