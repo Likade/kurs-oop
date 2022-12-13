@@ -1,3 +1,5 @@
+ /* eslint-disable */
+
 import './App.css';
 import Buying from './pages/buying/Buying';
 import Selling from './pages/selling/Selling';
@@ -13,7 +15,7 @@ import { Sousage } from "./classes/products/Sousages"
 import { Chicken } from "./classes/products/Chicken"
 
 function App() {
-  if(localStorage.getItem('sells') == undefined) {
+  if(localStorage.getItem('sells') === undefined) {
     localStorage.setItem('sells', [])
   }
 

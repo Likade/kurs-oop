@@ -1,3 +1,5 @@
+ /* eslint-disable */
+
 import { Merchendise } from "../merchendise/merchendise";
 
 export class Sweets extends Merchendise {

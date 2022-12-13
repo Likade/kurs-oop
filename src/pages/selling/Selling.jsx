@@ -23,14 +23,16 @@ const Selling = ({merch}) => {
     const getMerch = (cath) => {
         let helpOption = [];
         merch.map(el => {
-            if(el.cathegory == cath) helpOption.push(<option>{el.title}</option>);
+            if(el.cathegory === cath) helpOption.push(<option>{el.title}</option>);
+            return el
         })
         setOption(helpOption);
     }
 
     const getToSell = () =>{
         merch.map(el => {
-                if(el.title == refProd.current.value) setToSell(el.count);
+                if(el.title === refProd.current.value) setToSell(el.count);
+                return el
             }
         )
     }
@@ -39,7 +41,8 @@ const Selling = ({merch}) => {
         let helpPrice;
         let isSold;
         merch.map(el => {
-            if(el.title == refProd.current.value) {isSold = el.sell(count); helpPrice = el.price};
+            if(el.title === refProd.current.value) {isSold = el.sell(count); helpPrice = el.price};
+            return el
         });
         if(isSold) {
             let sells = localStorage.getItem('sells');
@@ -84,7 +87,7 @@ const Selling = ({merch}) => {
             onChange={(event) => setCount(event.target.value)}/>
             <span>Введите дату и время продажи</span>
             <input className={styles.date} type="datetime-local" ref={dateRef} onChange = {e => setDate(e.target.value)}/>
-            <button className={styles.button} disabled = {(merchOption == [] || toSell == 0 || date == '' || count < 1) ? true : false} onClick={() => sell()}>Продать</button>
+            <button className={styles.button} disabled = {(merchOption === [] || toSell === 0 || date === '' || count < 1) ? true : false} onClick={() => sell()}>Продать</button>
             {err && <ErrCount/>}
             {message && <Success text={`Товар успешно продан в количестве ${count} шт.`}/>}
         </div>

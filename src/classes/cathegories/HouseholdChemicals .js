@@ -1,3 +1,5 @@
+ /* eslint-disable */
+
 import { Merchendise } from "../merchendise/merchendise";
 
 export class HouseholdChemicals extends Merchendise {
@@ -6,7 +8,7 @@ export class HouseholdChemicals extends Merchendise {
         this.cathegory = "Домашняя химия";
     }
     takeInfo() {
-        if(localStorage.getItem(this.title) == undefined)
+        if(localStorage.getItem(this.title) === undefined)
             localStorage.setItem(this.title, 0);
         this.count = localStorage.getItem(this.title) 
     }

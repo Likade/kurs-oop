@@ -1,3 +1,5 @@
+ /* eslint-disable */
+
 import { VictoryBar, VictoryChart, VictoryAxis } from 'victory';
 import { useState } from 'react';
 

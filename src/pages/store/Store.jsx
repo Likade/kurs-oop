@@ -4,7 +4,7 @@ const Store =({merch}) =>{
     let displayStore = [];
     let categs = {};
     for(let i of merch){
-        if(categs[i.cathegory] == undefined)
+        if(categs[i.cathegory] === undefined)
             categs[i.cathegory] = []
         categs[i.cathegory].push({title: i.title, price: i.price, count: i.count})
     }

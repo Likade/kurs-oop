@@ -1,3 +1,5 @@
+ /* eslint-disable */
+
 import { useState } from "react";
 import { useRef } from "react";
 
@@ -18,14 +20,15 @@ const Buying = ({merch}) => {
     const getMerch = (cath) => {
         let helpOption = [];
         merch.map(el => {
-            if(el.cathegory == cath) helpOption.push(<option>{el.title}</option>);
+            if(el.cathegory === cath) helpOption.push(<option>{el.title}</option>);
+            return el
         })
         setOption(helpOption);
     }
 
     const setStorage = () => {
         for(let i of merch){
-            if(i.title == ref.current.value) {
+            if(i.title === ref.current.value) {
                 i.order(count);
                 setMessage(true)
                 setTimeout(() => {
